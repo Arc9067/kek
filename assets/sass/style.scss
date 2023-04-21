@@ -1,0 +1,280 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+  --first-color: #09f483;
+  --body-bg: #050c13;
+  --white: #fff;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Raleway", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #fff;
+  background-color: var(--body-bg);
+  overflow-x: hidden;
+}
+
+section,
+main {
+  overflow-x: hidden !important;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  max-width: 500px;
+}
+
+/*===== CLASS CSS ===== */
+.container {
+  // padding-inline: 0 !important;
+}
+
+.buy-btn {
+  padding: 16px 32px;
+  background: #09f483;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  border-radius: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  display: block;
+  width: max-content;
+  text-transform: capitalize;
+}
+header {
+  width: 100%;
+  // background-color: red;
+  position: absolute;
+  top: 0;
+
+  nav {
+    padding-block: 10px;
+    border-bottom: 1px solid #ffffff;
+    padding-inline: 0 !important;
+  }
+}
+
+#hero {
+  width: 100%;
+  padding-block: 100px;
+  position: relative;
+
+  .container {
+    padding-inline: 0 !important;
+  }
+
+  h1.title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 94px;
+    text-align: center;
+    color: #ffffff;
+
+    span {
+      background: linear-gradient(270.05deg, #11f650 11.75%, #03f0ad 50.77%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+  }
+  p.info {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+  }
+  @media (min-width: 700px) {
+    .logo-over {
+      // position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  // @media (max-width: 700px) {
+  //   .logo-over {
+  //     width: 100vw;
+  //   }
+  // }
+
+  .pattern {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+}
+
+main {
+  width: 100%;
+
+  #about {
+    width: 100%;
+    padding-block: 50px;
+
+    @media (max-width: 700px) {
+      .img-div {
+        order: 2;
+      }
+    }
+
+    h1.title {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      color: #ffffff;
+
+      @media (max-width: 700px) {
+        font-size: 40px;
+        line-height: 47px;
+      }
+    }
+    p.info {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #ffffff;
+    }
+  }
+
+  #tokenomics {
+    width: 100%;
+    padding-block: 50px;
+
+    h1.title {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      color: #ffffff;
+    }
+    .row {
+      .cd {
+        .p-div {
+          display: flex;
+          justify-content: space-between !important;
+          row-gap: 1rem;
+          text-transform: capitalize;
+          flex-direction: column;
+
+          h2:nth-child(1) {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            color: #ffffff;
+          }
+          h2:nth-child(2) {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            color: #fdb503;
+          }
+
+          .ch {
+            height: 20px;
+            background: #052d2c;
+            border-radius: 1000px;
+            .inner {
+              height: 20px;
+              background: #fdb503;
+              width: 10%;
+              border-radius: 1000px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding-block: 50px;
+  width: 100%;
+
+  p {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #ffffff;
+    text-align: center;
+  }
+}
